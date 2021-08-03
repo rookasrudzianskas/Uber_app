@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, View} from "react-native";
+import {FlatList, Text, TouchableOpacity, View} from "react-native";
 
 const data = [
     {
@@ -18,9 +18,11 @@ const data = [
 
 const NavOptions = () => {
     return (
-        <View>
-
-        </View>
+        <FlatList data={data} horizontal renderItem={({item}) => (
+            <TouchableOpacity>
+                <Text>{item.title}</Text>
+            </TouchableOpacity>
+        )} />
     );
 };
 
