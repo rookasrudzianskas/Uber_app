@@ -32,11 +32,11 @@ const HomeScreen = () => {
                         // console.log(data)
                         console.log(details)
                     }}
-                    // returnKeyType={"search"}
+                    returnKeyType={"search"}
                     fetchDetails={true}
                     nearbyPlacesAPI="GooglePlacesSearch"
                     debounce={400}
-                    minLength={2}
+                    // minLength={2}
                     enablePoweredByContainer={false}
                     query={{
                         key: GOOGLE_MAPS_API,
