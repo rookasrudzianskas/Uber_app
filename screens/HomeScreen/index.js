@@ -30,7 +30,7 @@ const HomeScreen = () => {
                     }}
                     onPress={(data, details = null) => {
                         // console.log(data)
-                        // console.log(details)
+                        console.log(details)
                     }}
                     // returnKeyType={"search"}
                     fetchDetails={true}
