@@ -4,7 +4,8 @@ import styles from './styles';
 import tw from 'tailwind-react-native-classnames';
 import NavOptions from "../../components/NavOptions";
 import {useNavigation} from "@react-navigation/native";
-
+import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
+import {GOOGLE_MAPS_API} from "@env";
 
 const HomeScreen = () => {
 
@@ -16,6 +17,21 @@ const HomeScreen = () => {
                 <Image style={{width: 100, height: 100, resizeMode: 'contain'}} source={{
                     uri: 'https://links.papareact.com/gzs'
                 }} />
+
+                <GooglePlacesAutocomplete
+                    placeholder='Search'
+                    nearbyPlacesAPI="GooglePlacesSearch"
+                    debounce={400}
+                    // enablePoweredByContainer={false}
+                    onPress={(data, details = null) => {
+                        // 'details' is provided when fetchDetails = true
+                        console.log(data, details);
+                    }}
+                    query={{
+                        key: GOOGLE_MAPS_API,
+                        language: 'en',
+                    }}
+                />
 
                 <NavOptions />
             </View>
