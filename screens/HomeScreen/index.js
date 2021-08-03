@@ -28,8 +28,13 @@ const HomeScreen = () => {
                             fontSize: 18,
                         },
                     }}
+                    onPress={(data, details = null) => {
+
+                    }}
+                    fetchDetails={true}
                     nearbyPlacesAPI="GooglePlacesSearch"
                     debounce={400}
+                    minLength={2}
                     enablePoweredByContainer={false}
                     query={{
                         key: GOOGLE_MAPS_API,
