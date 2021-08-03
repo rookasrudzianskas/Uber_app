@@ -34,3 +34,5 @@ export const selectDestination = (state) => state.nav.destination; // this goes 
 export const selectTravelTimeInformation = (state) => state.nav.travelTimeInformation; // this goes to the setTimeTravelInformation and gets the travel information
 
 export default navSlice.reducer;
+
+// fixed, the issue was reducers
