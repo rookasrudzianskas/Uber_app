@@ -33,7 +33,7 @@ const HomeScreen = () => {
                         // console.log(details)
                     }}
                     // returnKeyType={"search"}
-                    // fetchDetails={true}
+                    fetchDetails={true}
                     nearbyPlacesAPI="GooglePlacesSearch"
                     debounce={400}
                     minLength={2}
