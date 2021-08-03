@@ -7,7 +7,7 @@ import {useNavigation} from "@react-navigation/native";
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
 import {GOOGLE_MAPS_API} from "@env";
 import {useDispatch} from "react-redux";
-import {setOrigin} from "../../slices/navSlice";
+import {setDestination, setOrigin} from "../../slices/navSlice";
 
 const HomeScreen = () => {
 
@@ -41,6 +41,8 @@ const HomeScreen = () => {
                             location: details.geometry.location, // object with lati and long
                             description: data.description,
                         }))
+
+                        dispatch(setDestination(null));
                     }}
                     returnKeyType={"search"}
                     fetchDetails={true}

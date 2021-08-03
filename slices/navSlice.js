@@ -9,7 +9,7 @@ const initialState = {
 export const navSlice = createSlice({
    name: 'nav',
     initialState,
-    reducer: {
+    reducers: {
        setOrigin: (state, action) => {
            // this sets the origin
            state.origin = action.payload;
