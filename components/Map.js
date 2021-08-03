@@ -9,7 +9,8 @@ const Map = () => {
     return (
         <View>
             <MapView style={styles.map}
-                initialRegion={{
+                     provider="google"
+                     initialRegion={{
                     latitude: 37.78825,
                     longitude: -122.4324,
                     latitudeDelta: 0.0922,

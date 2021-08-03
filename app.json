@@ -17,9 +17,17 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.rookas.rokas",
+      "config": {
+        "googleMapsApiKey": "AIzaSyBURJoMcwb_jMu9f379C7BH6HjUxGpcTkQ"
+      }
     },
     "android": {
+      "package": "com.codingmechanic.mapcuny",
+      "config": {
+        "googleMaps": { "apiKey": "AIzaSyBURJoMcwb_jMu9f379C7BH6HjUxGpcTkQ" }
+      },
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
