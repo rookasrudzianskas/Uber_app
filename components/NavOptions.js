@@ -26,7 +26,7 @@ const NavOptions = () => {
                     <Image style={{width: 120, height: 120, resizeMode: 'contain'}} source={{uri: item.image}} />
                     <Text style={tw`mt-2 text-lg font-semibold`}>{item.title}</Text>
 
-                    <Icon type='antdesign' color="white" name="arrowright" />
+                    <Icon style={tw`p-2 bg-black`} type='antdesign' color="white" name="arrowright" />
                 </View>
             </TouchableOpacity>
         )} />
