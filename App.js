@@ -5,10 +5,12 @@ import {Provider} from 'react-redux';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <StatusBar style="auto" />
-      <Text>Uber app 🚀!</Text>
-    </View>
+      <Provider>
+        <View style={styles.container}>
+          <StatusBar style="auto" />
+          <Text>Uber app 🚀!</Text>
+        </View>
+      </Provider>
   );
 }
 
