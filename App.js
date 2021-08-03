@@ -7,6 +7,7 @@ import HomeScreen from "./screens/HomeScreen";
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
+import Router from "./navigation/router";
 
 
 
@@ -16,7 +17,7 @@ export default function App() {
           <NavigationContainer>
               <SafeAreaProvider>
                   <StatusBar style="auto" />
-                  <HomeScreen />
+                  <Router />
               </SafeAreaProvider>
           </NavigationContainer>
       </Provider>
