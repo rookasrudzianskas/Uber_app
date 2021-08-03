@@ -1,12 +1,14 @@
 import React from 'react';
-import {Text, View} from "react-native";
+import {SafeAreaView, Text, View} from "react-native";
 import styles from './styles';
 
 const HomeScreen = () => {
     return (
-        <View>
-            <Text>Rokas</Text>
-        </View>
+        <SafeAreaView>
+            <View>
+                <Text>Rokas</Text>
+            </View>
+        </SafeAreaView>
     );
 };
 
