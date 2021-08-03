@@ -31,10 +31,6 @@ const HomeScreen = () => {
                     nearbyPlacesAPI="GooglePlacesSearch"
                     debounce={400}
                     // enablePoweredByContainer={false}
-                    onPress={(data, details = null) => {
-                        // 'details' is provided when fetchDetails = true
-                        console.log(data, details);
-                    }}
                     query={{
                         key: GOOGLE_MAPS_API,
                         language: 'en',
