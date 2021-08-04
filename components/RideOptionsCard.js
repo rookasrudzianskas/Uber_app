@@ -3,6 +3,7 @@ import {FlatList, Image, SafeAreaView, Text, TouchableOpacity, View} from "react
 import tw from "tailwind-react-native-classnames";
 import {Icon} from "react-native-elements";
 import {useNavigation} from "@react-navigation/native";
+import {GOOGLE_MAPS_API} from "@env";
 
 const data = [
     {
