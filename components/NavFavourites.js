@@ -27,8 +27,8 @@ const NavFavourites = () => {
                 <Icon style={tw`mr-4 rounded-full bg-gray-300 p-3`} name={icon} type="ionicon" color="white" size={18} />
 
                 <View>
-                    <Text>{location}</Text>
-                    <Text>{destination}</Text>
+                    <Text style={tw`font-semibold text-lg`}>{location}</Text>
+                    <Text style={tw`text-gray-500`}>{destination}</Text>
                 </View>
             </TouchableOpacity>
         )}/>
