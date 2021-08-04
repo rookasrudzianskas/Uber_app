@@ -3,8 +3,8 @@ import {Dimensions, Text, View} from "react-native";
 import MapView, {Marker} from 'react-native-maps';
 import tw from "tailwind-react-native-classnames";
 import {StyleSheet} from "react-native";
-import {useSelector} from "react-redux";
-import {selectDestination, selectOrigin} from "../slices/navSlice";
+import {useDispatch, useSelector} from "react-redux";
+import {selectDestination, selectOrigin, setTravelTimeInformation} from "../slices/navSlice";
 import MapViewDirections from "react-native-maps-directions";
 import {GOOGLE_MAPS_API} from "@env";
 
@@ -20,6 +20,8 @@ const Map = () => {
     const mapRef = useRef(null);
     // console.log("MAP REF", mapRef)
 
+    const dispatch = useDispatch();
+
 
     useEffect(() => {
 
@@ -27,7 +29,10 @@ const Map = () => {
 
         const getTravelTime = async() => {
             fetch(`https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=${origin.description}&destinations=${destination.description}&key=${GOOGLE_MAPS_API}`).then((res) => res.json()).then(data => {
-                console.log(data);
+                // console.log(data);
+
+                // this gets the travel information in here
+                dispatch(setTravelTimeInformation(data.rows[0].elements[0]));
             });
         };
 
