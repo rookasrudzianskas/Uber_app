@@ -16,6 +16,12 @@ import tw from "tailwind-react-native-classnames";
             location: "Work",
             destination: 'London Eye, London, UK',
         },
+        {
+            id: "789",
+            icon: "briefcase",
+            location: "Coffee",
+            destination: 'London Bridge, London, UK',
+        },
     ];
 
 const NavFavourites = () => {
