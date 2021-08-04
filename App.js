@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import {StyleSheet, Text, View, KeyboardAvoidingView, Platform} from 'react-native';
 import {Provider} from 'react-redux';
 import {store} from "./store";
 import HomeScreen from "./screens/HomeScreen";
@@ -16,8 +16,10 @@ export default function App() {
       <Provider store={store}>
           <NavigationContainer>
               <SafeAreaProvider>
-                  <StatusBar style="auto" />
-                  <Router />
+                  <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? "padding" : "height"} style={{flex: 1}}>
+                      <StatusBar style="auto" />
+                      <Router />
+                  </KeyboardAvoidingView>
               </SafeAreaProvider>
           </NavigationContainer>
       </Provider>
