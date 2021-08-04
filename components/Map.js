@@ -1,18 +1,29 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import {Dimensions, Text, View} from "react-native";
 import MapView, {Marker} from 'react-native-maps';
 import tw from "tailwind-react-native-classnames";
 import {StyleSheet} from "react-native";
 import {useSelector} from "react-redux";
-import {selectOrigin} from "../slices/navSlice";
+import {selectDestination, selectOrigin} from "../slices/navSlice";
+import MapViewDirections from "react-native-maps-directions";
+import {GOOGLE_MAPS_API} from "@env";
+
 
 
 const Map = () => {
 
     const origin = useSelector(selectOrigin);
+    const destination = useSelector(selectDestination);
+    const mapRef = useRef(null);
+
+    useEffect(() => {
+
+    })
+
     return (
         <View>
             <MapView style={styles.map}
+                     ref={mapRef}
                      provider="google"
                      mapType="mutedStandard"
                      initialRegion={{
@@ -21,6 +32,16 @@ const Map = () => {
                         latitudeDelta: 0.005,
                         longitudeDelta: 0.005,
                      }}>
+
+                {origin && destination && (
+                    <MapViewDirections
+                        origin={origin.description}
+                        destination={destination.description}
+                        apikey={GOOGLE_MAPS_API}
+                        strokeWidth={3}
+                        strokeColor={"black"}
+                    />
+                )}
 
 
                 {origin?.location && (
