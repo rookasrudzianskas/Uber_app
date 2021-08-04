@@ -1,8 +1,29 @@
 import React from 'react';
-import {SafeAreaView, Text, TouchableOpacity, View} from "react-native";
+import {FlatList, SafeAreaView, Text, TouchableOpacity, View} from "react-native";
 import tw from "tailwind-react-native-classnames";
 import {Icon} from "react-native-elements";
 import {useNavigation} from "@react-navigation/native";
+
+const data = [
+    {
+        id: "Uber-X-123",
+        title: "UberX",
+        multiplier: 1,
+        image: "https://links.papareact.com/3pn",
+    },
+    {
+        id: "Uber-XL-456",
+        title: "UberXL",
+        multiplier: 1.2,
+        image: "https://links.papareact.com/5w8",
+    },
+    {
+        id: "Uber-LUX-789",
+        title: "Uber LUX",
+        multiplier: 1.75,
+        image: "https://links.papareact.com/7pf",
+    },
+]
 
 const RideOptionsCard = () => {
 
@@ -18,6 +39,9 @@ const RideOptionsCard = () => {
                 <Text style={tw`text-center py-5 text-xl`}>Select a Ride</Text>
 
             </View>
+
+
+            <FlatList data={data} renderItem={} />
         </SafeAreaView>
     );
 };
