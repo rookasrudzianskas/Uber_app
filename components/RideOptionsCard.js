@@ -45,7 +45,7 @@ const RideOptionsCard = () => {
 
 
             <FlatList data={data} keyExtractor={(item) => item.id} renderItem={({item: {id, title, image, multiplier}, item}) => (
-                <TouchableOpacity onPress={() => setSelected(item)} activeOpacity={0.5} style={tw`flex flex-row items-center justify-between px-10`}>
+                <TouchableOpacity onPress={() => setSelected(item)} activeOpacity={1} style={tw`flex flex-row items-center justify-between px-10 ${id === selected?.id && "bg-gray-200"}`}>
                     <Image style={{width: 100, height: 100, resizeMode: 'contain',}} source={{uri: image}} />
 
                     <View style={tw`-ml-6`}>
