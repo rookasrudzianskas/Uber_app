@@ -20,9 +20,10 @@ const Map = () => {
 
         if(!origin || !destination) return;
 
+
         // zoom out and fit the markers
         mapRef.current.fitToSuppliedMarkers(["origin", "destination"], {
-            // edgePadding: {top: 50, right: 50, bottom: 50, left: 50 }
+            edgePadding: {top: 50, right: 50, bottom: 50, left: 50 }
         });
 
     }, [origin, destination]);
