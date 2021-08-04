@@ -53,7 +53,7 @@ const RideOptionsCard = () => {
             </View>
 
 
-            <FlatList data={data} keyExtractor={(item) => item.id} renderItem={({item: {id, title, image, multiplier}, item}) => (
+            <FlatList showsVerticalScrollIndicator={false} data={data} keyExtractor={(item) => item.id} renderItem={({item: {id, title, image, multiplier}, item}) => (
                 <TouchableOpacity onPress={() => setSelected(item)} activeOpacity={1} style={tw`flex flex-row items-center justify-between px-10 ${id === selected?.id && "bg-gray-200"}`}>
                     <Image style={{width: 100, height: 100, resizeMode: 'contain',}} source={{uri: image}} />
 
@@ -66,7 +66,7 @@ const RideOptionsCard = () => {
 
                         {new Intl.NumberFormat('en-gb', {
                             style: 'currency',
-                            currency: 'GBP',
+                            currency: 'USD',
                         }).format(
 
                             (travelTimeInformation?.duration.value * SURGE_CHARGE_RATE * multiplier) / 100
@@ -79,7 +79,7 @@ const RideOptionsCard = () => {
 
             )} />
 
-            <View>
+            <View  style={tw`mt-auto border-t border-gray-200`}>
                 <TouchableOpacity disabled={!selected} style={tw`bg-black py-3 m-3 ${!selected && "bg-gray-300"}`}>
                     <Text style={tw`text-center text-white text-xl`}>Choose {selected?.title}</Text>
                 </TouchableOpacity>
