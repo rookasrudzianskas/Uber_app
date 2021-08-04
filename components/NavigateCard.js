@@ -5,9 +5,15 @@ import {GooglePlacesAutocomplete} from "react-native-google-places-autocomplete"
 import {setDestination, setOrigin} from "../slices/navSlice";
 import {GOOGLE_MAPS_API} from "@env";
 import {StyleSheet} from "react-native";
+import {useDispatch} from "react-redux";
+import {useNavigation} from "@react-navigation/native";
 
 
 const NavigateCard = () => {
+
+    const dispatch = useDispatch();
+    const navigation = useNavigation();
+
     return (
         <SafeAreaView style={tw`bg-white flex-1`}>
             <Text style={tw`text-center py-5 text-xl`}>Good Morning, Rokas</Text>
@@ -21,13 +27,15 @@ const NavigateCard = () => {
                             // console.log(data)
                             // console.log(details)
 
-                            dispatch(setOrigin({
+                            dispatch(setDestination({
                                 // payload goes in here
                                 location: details.geometry.location, // object with lati and long
                                 description: data.description,
-                            }))
+                            }));
 
-                            dispatch(setDestination(null));
+                            navigation.navigate('RideOptionsCard');
+
+                            // dispatch(setDestination(null));
                         }}
                         returnKeyType={"search"}
                         fetchDetails={true}
