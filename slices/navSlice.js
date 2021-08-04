@@ -36,3 +36,5 @@ export const selectTravelTimeInformation = (state) => state.nav.travelTimeInform
 export default navSlice.reducer;
 
 // fixed, the issue was reducers
+
+// done whole done
