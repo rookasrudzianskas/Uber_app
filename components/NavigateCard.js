@@ -1,11 +1,12 @@
 import React from 'react';
-import {Text, View} from "react-native";
+import {SafeAreaView, Text, View} from "react-native";
+import tw from "tailwind-react-native-classnames";
 
 const NavigateCard = () => {
     return (
-        <View>
+        <SafeAreaView style={tw`bg-white flex-1`}>
             <Text>ROOOOOOOOOKAS</Text>
-        </View>
+        </SafeAreaView>
     );
 };
 
