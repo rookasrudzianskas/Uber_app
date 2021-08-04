@@ -32,7 +32,7 @@ const Map = () => {
         <View>
             <MapView style={styles.map}
                      ref={mapRef}
-                     // provider="google"
+                     provider="google"
                      mapType="mutedStandard"
                      initialRegion={{
                         latitude: origin.location.lat,
