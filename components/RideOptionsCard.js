@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {FlatList, Image, SafeAreaView, Text, TouchableOpacity, View} from "react-native";
 import tw from "tailwind-react-native-classnames";
 import {Icon} from "react-native-elements";
@@ -28,6 +28,9 @@ const data = [
 const RideOptionsCard = () => {
 
     const navigation = useNavigation();
+    const [selected, setSelected] = useState(null);
+
+
     return (
         <SafeAreaView style={tw`bg-white flex-grow`}>
             <View>
