@@ -88,4 +88,6 @@ const toInputBoxStyles = StyleSheet.create({
         paddingHorizontal: 20,
         paddingBottom: 0,
     }
-})
+});
+
+
