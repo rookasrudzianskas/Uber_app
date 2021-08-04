@@ -13,7 +13,10 @@ import {GOOGLE_MAPS_API} from "@env";
 const Map = () => {
 
     const origin = useSelector(selectOrigin);
+    // console.log("ORIGIN IS", origin);
     const destination = useSelector(selectDestination);
+
+    // console.log("DESTINATION IS", destination);
     const mapRef = useRef(null);
 
     useEffect(() => {
