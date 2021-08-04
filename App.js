@@ -16,7 +16,7 @@ export default function App() {
       <Provider store={store}>
           <NavigationContainer>
               <SafeAreaProvider>
-                  <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? "padding" : "height"} style={{flex: 1}}>
+                  <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? "padding" : "height"} style={{flex: 1}} keyboardVerticalOffset={Platform.OS === 'ios' ? -64 : 0}>
                       <StatusBar style="auto" />
                       <Router />
                   </KeyboardAvoidingView>
