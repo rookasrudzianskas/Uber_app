@@ -18,6 +18,7 @@ const Map = () => {
 
     // console.log("DESTINATION IS", destination);
     const mapRef = useRef(null);
+    // console.log("MAP REF", mapRef)
 
     useEffect(() => {
 
