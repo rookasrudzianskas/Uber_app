@@ -26,9 +26,9 @@ const Map = () => {
 
 
         // zoom out and fit the markers
-        // mapRef.current.fitToSuppliedMarkers(["origin", "destination"], {
-        //     edgePadding: {top: 50, right: 50, bottom: 50, left: 50 }
-        // });
+        mapRef.current.fitToSuppliedMarkers(["origin", "destination"], {
+            edgePadding: {top: 50, right: 50, bottom: 50, left: 50 }
+        });
 
 
     }, [origin, destination]);
@@ -68,7 +68,7 @@ const Map = () => {
                         }}
                         title="Starting Point"
                         description={origin.description}
-                        indentifier="origin"
+                        identifier="origin"
                     />
                 )}
 
@@ -81,7 +81,7 @@ const Map = () => {
                         }}
                         title="Final Point"
                         description={destination.description}
-                        indentifier="destination"
+                        identifier="destination"
                     />
                 )}
 
