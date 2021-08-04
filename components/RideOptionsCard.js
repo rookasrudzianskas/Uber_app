@@ -60,8 +60,8 @@ const RideOptionsCard = () => {
             )} />
 
             <View>
-                <TouchableOpacity>
-                    <Text>Choose {selected?.title}</Text>
+                <TouchableOpacity style={tw`bg-black py-3 m-3`}>
+                    <Text style={tw`text-center text-white text-xl`}>Choose {selected?.title}</Text>
                 </TouchableOpacity>
             </View>
 
