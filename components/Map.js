@@ -23,6 +23,8 @@ const Map = () => {
 
     useEffect(() => {
 
+        if(!origin || !destination) return;
+
         const getTravelTime = async() => {
 
         };
