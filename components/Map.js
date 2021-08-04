@@ -23,6 +23,12 @@ const Map = () => {
 
     useEffect(() => {
 
+        const getTravelTime = async() => {
+
+        };
+
+        getTravelTime();
+
     }, [origin, destination, GOOGLE_MAPS_API]);
 
     useEffect(() => {
