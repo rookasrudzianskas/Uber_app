@@ -69,7 +69,7 @@ const RideOptionsCard = () => {
                             currency: 'USD',
                         }).format(
 
-                            (travelTimeInformation?.duration?.value * SURGE_CHARGE_RATE * multiplier) / 100
+                            (travelTimeInformation?.duration.value * SURGE_CHARGE_RATE * multiplier) / 100
 
                         )}
 
@@ -92,4 +92,4 @@ const RideOptionsCard = () => {
 
 export default RideOptionsCard;
 
-/// done I love it
+/// done
