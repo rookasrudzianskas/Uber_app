@@ -18,6 +18,11 @@ const Map = () => {
 
     useEffect(() => {
 
+        if(!origin || !destination) return;
+
+        // zoom out and fit the markers
+        mapRef.current.fitToSuppliedMarkers(['origin', 'destination'])
+
     }, [origin, destination]);
 
     return (
@@ -53,6 +58,19 @@ const Map = () => {
                         title="Starting Point"
                         description={origin.description}
                         indentifier="origin"
+                    />
+                )}
+
+
+                {destination?.location && (
+                    <Marker
+                        coordinate={{
+                            latitude: destination.location.lat,
+                            longitude: destination.location.lng,
+                        }}
+                        title="Final Point"
+                        description={destination.description}
+                        indentifier="destination"
                     />
                 )}
 
