@@ -39,9 +39,9 @@ const Map = () => {
                      ref={mapRef}
                      provider="google"
                      mapType="mutedStandard"
-                     onLayout={()=>{
-                         mapRef.current.fitToCoordinates([{latitude: 34.5, longitude: 82.5}])
-                     }}
+                     // onLayout={()=>{
+                     //     mapRef.current.fitToCoordinates([{latitude: 34.5, longitude: 82.5}])
+                     // }}
                      initialRegion={{
                         latitude: origin.location.lat,
                         longitude: origin.location.lng,
