@@ -40,7 +40,7 @@ const Map = () => {
                      provider="google"
                      mapType="mutedStandard"
                      onLayout={()=>{
-                         mapRef.current.fitToCoordinates([{latitude: 38.3459963, longitude: -0.4906855}])
+                         mapRef.current.fitToCoordinates([{latitude: 34.5, longitude: 82.5}])
                      }}
                      initialRegion={{
                         latitude: origin.location.lat,
