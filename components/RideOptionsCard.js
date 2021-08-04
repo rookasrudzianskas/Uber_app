@@ -4,6 +4,8 @@ import tw from "tailwind-react-native-classnames";
 import {Icon} from "react-native-elements";
 import {useNavigation} from "@react-navigation/native";
 import {GOOGLE_MAPS_API} from "@env";
+import {useSelector} from "react-redux";
+import {selectTravelTimeInformation} from "../slices/navSlice";
 
 const data = [
     {
@@ -30,6 +32,8 @@ const RideOptionsCard = () => {
 
     const navigation = useNavigation();
     const [selected, setSelected] = useState(null);
+
+    const travelTimeInformation = useSelector(selectTravelTimeInformation);
 
 
     return (
