@@ -11,22 +11,26 @@ const data = [
     {
         id: "Uber-X-123",
         title: "UberX",
-        multiplier: 1,
+        multiplier: 1, // const for the charge rate
         image: "https://links.papareact.com/3pn",
     },
     {
         id: "Uber-XL-456",
         title: "UberXL",
-        multiplier: 1.2,
+        multiplier: 1.2, // const for the charge rate
         image: "https://links.papareact.com/5w8",
     },
     {
         id: "Uber-LUX-789",
         title: "Uber LUX",
-        multiplier: 1.75,
+        multiplier: 1.75, // const for the charge rate
         image: "https://links.papareact.com/7pf",
     },
-]
+];
+
+// if we have Surge pricing we are charging with go up
+
+const SURGE_CHARGE_RATE = 1.5;
 
 const RideOptionsCard = () => {
 
@@ -58,7 +62,18 @@ const RideOptionsCard = () => {
                         <Text>{travelTimeInformation?.duration.text} Travel Time</Text>
                     </View>
 
-                    <Text style={tw`text-xl`}>$99</Text>
+                    <Text style={tw`text-xl`}>
+
+                        {new Intl.NumberFormat('en-gb', {
+                            style: 'currency',
+                            currency: 'GBP',
+                        }).format(
+
+                            (travelTimeInformation?.duration.value * SURGE_CHARGE_RATE * multiplier) / 100
+
+                        )}
+
+                    </Text>
 
                 </TouchableOpacity>
 
