@@ -59,6 +59,12 @@ const RideOptionsCard = () => {
 
             )} />
 
+            <View>
+                <TouchableOpacity>
+                    <Text>Choose {selected?.title}</Text>
+                </TouchableOpacity>
+            </View>
+
 
         </SafeAreaView>
     );
