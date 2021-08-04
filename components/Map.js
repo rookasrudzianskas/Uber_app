@@ -13,10 +13,10 @@ import {GOOGLE_MAPS_API} from "@env";
 const Map = () => {
 
     const origin = useSelector(selectOrigin);
-    // console.log("ORIGIN IS", origin);
+    console.log("ORIGIN IS", origin);
     const destination = useSelector(selectDestination);
 
-    // console.log("DESTINATION IS", destination);
+    console.log("DESTINATION IS", destination);
     const mapRef = useRef(null);
     // console.log("MAP REF", mapRef)
 
@@ -26,9 +26,10 @@ const Map = () => {
 
 
         // zoom out and fit the markers
-        mapRef.current.fitToSuppliedMarkers(["origin", "destination"], {
-            edgePadding: {top: 50, right: 50, bottom: 50, left: 50 }
-        });
+        // mapRef.current.fitToSuppliedMarkers(["origin", "destination"], {
+        //     edgePadding: {top: 50, right: 50, bottom: 50, left: 50 }
+        // });
+
 
     }, [origin, destination]);
 
@@ -38,6 +39,9 @@ const Map = () => {
                      ref={mapRef}
                      provider="google"
                      mapType="mutedStandard"
+                     onLayout={()=>{
+                         mapRef.current.fitToCoordinates([{latitude: 38.3459963, longitude: -0.4906855}])
+                     }}
                      initialRegion={{
                         latitude: origin.location.lat,
                         longitude: origin.location.lng,
