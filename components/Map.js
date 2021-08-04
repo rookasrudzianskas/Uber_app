@@ -20,6 +20,11 @@ const Map = () => {
     const mapRef = useRef(null);
     // console.log("MAP REF", mapRef)
 
+
+    useEffect(() => {
+
+    }, [origin, destination, GOOGLE_MAPS_API]);
+
     useEffect(() => {
 
         if(!origin || !destination) return;
