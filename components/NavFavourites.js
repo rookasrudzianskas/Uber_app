@@ -22,8 +22,12 @@ const NavFavourites = () => {
 
 
     return (
-        <FlatList data={data} keyExtractor={item => item.id} renderItem={({item: {location, destination, icon }}) => (
-            <TouchableOpacity style={tw`flex-row items-center p-5`}>
+        <FlatList data={data} ItemSeparatorComponent={() => (
+            <View style={[tw`bg-gray-200 `, {height: 0.5}]}>
+
+            </View>
+        )} keyExtractor={item => item.id} renderItem={({item: {location, destination, icon }}) => (
+            <TouchableOpacity activeOpacity={0.5} style={tw`flex-row items-center p-5`}>
                 <Icon style={tw`mr-4 rounded-full bg-gray-300 p-3`} name={icon} type="ionicon" color="white" size={18} />
 
                 <View>
