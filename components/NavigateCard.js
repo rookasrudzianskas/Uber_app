@@ -37,7 +37,7 @@ const NavigateCard = () => {
 
                             navigation.navigate('RideOptionsCard');
 
-                            // dispatch(setDestination(null));
+                            dispatch(setDestination(null));
                         }}
                         returnKeyType={"search"}
                         fetchDetails={true}
