@@ -45,10 +45,12 @@ const RideOptionsCard = () => {
                 <TouchableOpacity activeOpacity={0.5} style={tw`flex flex-row items-center justify-between px-10`}>
                     <Image style={{width: 100, height: 100, resizeMode: 'contain',}} source={{uri: image}} />
 
-                    <View >
-                        <Text>{title}</Text>
+                    <View style={tw`-ml-6`}>
+                        <Text style={tw`text-xl font-semibold`}>{title}</Text>
                         <Text>Travel Time ...</Text>
                     </View>
+
+                    <Text style={tw`text-xl`}>$99</Text>
 
                 </TouchableOpacity>
 
