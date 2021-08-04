@@ -18,7 +18,7 @@ const Map = () => {
 
     useEffect(() => {
 
-    })
+    }, [origin, destination]);
 
     return (
         <View>
