@@ -42,10 +42,19 @@ const RideOptionsCard = () => {
 
 
             <FlatList data={data} keyExtractor={(item) => item.id} renderItem={({item: {id, title, image, multiplier}, item}) => (
-                <TouchableOpacity activeOpacity={0.5}>
+                <TouchableOpacity activeOpacity={0.5} style={tw`flex flex-row items-center justify-between px-10`}>
                     <Image style={{width: 100, height: 100, resizeMode: 'contain',}} source={{uri: image}} />
+
+                    <View >
+                        <Text>{title}</Text>
+                        <Text>Travel Time ...</Text>
+                    </View>
+
                 </TouchableOpacity>
+
             )} />
+
+
         </SafeAreaView>
     );
 };
