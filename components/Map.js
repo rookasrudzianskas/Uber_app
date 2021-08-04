@@ -3,18 +3,23 @@ import {Dimensions, Text, View} from "react-native";
 import MapView, {Marker} from 'react-native-maps';
 import tw from "tailwind-react-native-classnames";
 import {StyleSheet} from "react-native";
+import {useSelector} from "react-redux";
+import {selectOrigin} from "../slices/navSlice";
 
 
 const Map = () => {
+
+    const origin = useSelector(selectOrigin);
     return (
         <View>
             <MapView style={styles.map}
                      provider="google"
+                     mapType="mutedStandard"
                      initialRegion={{
-                        latitude: 37.78825,
-                        longitude: -122.4324,
-                        latitudeDelta: 0.0922,
-                        longitudeDelta: 0.0421,
+                        latitude: origin.location.lat,
+                        longitude: origin.location.lng,
+                        latitudeDelta: 0.005,
+                        longitudeDelta: 0.005,
             }}/>
         </View>
     );
